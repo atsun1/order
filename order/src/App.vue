@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <navtop></navtop>
-    <img src="./assets/logo.png">
 
     <router-view/>
+
   </div>
 </template>
 
@@ -15,7 +15,6 @@ export default {
   }
 }
 </script>
-
 <style>
   #app{
     width: 1200px;

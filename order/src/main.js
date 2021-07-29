@@ -11,6 +11,7 @@ import '@/assets/reset.css'
 Vue.use(Vant);
 Vue.config.productionTip = false
 
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
