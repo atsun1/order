@@ -10,7 +10,7 @@ Vue.use(Router)
 // })
 
 
-export default new Router({
+ const router = new Router({
   routes: [
     // {
     //   path: '/',
@@ -23,6 +23,7 @@ export default new Router({
     },
     {
       path: '/about',
+      redirect:'/contact',
       component: ()=>import('@/views/about.vue'),
 
       children:[
@@ -56,6 +57,17 @@ export default new Router({
       path: '/admin',
       component: ()=>import('@/views/admin.vue')
     }
-  ]
+  ],
+
 })
 
+
+router.beforeEach((to, from, next) => {
+
+  console.log(to,'1111')
+  console.log(from,'2222')
+  console.log(next,'3333')
+  next()
+})
+
+export default router
