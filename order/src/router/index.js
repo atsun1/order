@@ -58,16 +58,20 @@ Vue.use(Router)
       component: ()=>import('@/views/admin.vue')
     }
   ],
-
+  // 路由滚动
+  // scrollBehavior (to, from, savedPosition) {
+  //     console.log(savedPosition)
+  //     return savedPosition
+  //  }
 })
 
+// 路由拦截
+// router.beforeEach((to, from, next) => {
 
-router.beforeEach((to, from, next) => {
-
-  console.log(to,'1111')
-  console.log(from,'2222')
-  console.log(next,'3333')
-  next()
-})
+//   console.log(to,'1111')
+//   console.log(from,'2222')
+//   console.log(next,'3333')
+//   next()
+// })
 
 export default router

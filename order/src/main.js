@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Vant from 'vant';
+import Vant from 'vant'
+import axios from 'axios'
+import store from './store.js'
 import 'vant/lib/index.css';
 import '@/assets/reset.css'
+
 
 
 Vue.use(Vant);
@@ -16,6 +19,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
