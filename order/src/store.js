@@ -51,5 +51,11 @@ export default new Vuex.Store({
   },
   actions:{
     // 应用Mutations
+    setlistaync(context,data){
+      setTimeout( ()=>{
+        context.commit("setlist",data)
+      },1000)
+      
+    }
   }
 })
