@@ -27,7 +27,7 @@
     <div>
       <input type="text" v-model="hname">
       <input type="text" v-model="hage">
-      <button @click="pushaync">异步增加数组</button>
+      <button @click="pushaync(),Event($event)">异步增加数组</button>
     </div>
   </div>
 </template>
@@ -102,6 +102,9 @@
       },
       pushaync(){
         this.$store.dispatch("setlistaync",{name:this.hname,age:this.hage})
+      },
+      Event(event){
+        console.log(event)
       }
     }
 	}
