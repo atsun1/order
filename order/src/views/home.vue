@@ -45,32 +45,41 @@
         changenub:0,
         hage:0,
         hname:'',
-        // hlist:[
-        //     {
-        //       name:'张三',
-        //       age:18,
-
-        //     },
-        //     {
-        //       name:'张死',
-        //       age:18,
-
-        //     },
-        //     {
-        //       name:'张唔',
-        //       age:18,
-
-        //     },
-        //     {
-        //       name:'张流',
-        //       age:18,
-
-        //     }
-        // ],
+        testlist:[
+            {
+              name:'张三',
+              age:18,
+              money:4500
+            },
+            {
+              name:'张四',
+              age:13,
+              money:6000
+            },
+            {
+              name:'张唔',
+              age:25,
+              money:3800
+            },
+            {
+              name:'张流',
+              age:15,
+              money:5000
+            }
+        ],
       }
     },
     created(){
-      this.$store.commit("settest",'新的属性1')
+      this.$store.commit("settest",'新的属性1');
+      // sort 某个对象属性排序
+      function compare(value){
+        return (a,b)=>{
+          var v1 = a[value];
+          var v2 = b[value];
+          return v1 - v2
+        }
+      }
+      console.log(this.testlist.sort(compare('age')))
     },
     computed:{
       com(){

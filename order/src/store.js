@@ -17,7 +17,7 @@ export default new Vuex.Store({
 
       },
       {
-        name:'张死',
+        name:'张四',
         age:18,
 
       },
